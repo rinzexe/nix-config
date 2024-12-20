@@ -9,6 +9,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        # fixes a weird bug, don't remove
                 ({ ... }: {
           nixpkgs.config.permittedInsecurePackages = [
             "dotnet-sdk-6.0.428"
