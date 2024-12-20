@@ -285,6 +285,10 @@ programs.dconf.enable = true;
 
 environment.variables.NIXPKGS_ALLOW_UNFREE = "1";
 
+environment.variables = {
+  HOSTNAME = "rinz-main";
+};
+
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   
