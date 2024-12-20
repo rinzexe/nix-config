@@ -9,7 +9,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = 
-      let hostname = builtins.getEnv "HOSTNAME" or builtins.hostname; in
+      let hostname = builtins.getEnv "HOSTNAME"; in
       [
         # fixes a weird bug, don't remove
                 ({ ... }: {
