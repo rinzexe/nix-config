@@ -21,7 +21,7 @@
         ./common/aliases.nix
         ./common/config.nix
         
-        (if hostname == "rinz-main" then ./main/configuration.nix)
+        (if hostname == "rinz-main" then ./main/configuration.nix else "")
       ];
     };
   };
