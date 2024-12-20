@@ -24,6 +24,7 @@
 
           # Include specific configuration based on hostname
           (if hostname == "rinz-main" then ./main/configuration.nix else null)
+          (if hostname == "rinz-main" then ./main/hardware-configuration.nix else null)
         ];
       in
         # Filter out null values
