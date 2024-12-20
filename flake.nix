@@ -9,6 +9,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = 
+      let hostname = builtins.getEnv "HOSTNAME" or builtins.hostname;
       [
         # fixes a weird bug, don't remove
                 ({ ... }: {
@@ -19,7 +20,8 @@
         })
         ./common/aliases.nix
         ./common/config.nix
-        ./pc/configuration.nix
+        
+        (if hostname == "rinz-main" then ./main/configuration.nix else null)
       ];
     };
   };
