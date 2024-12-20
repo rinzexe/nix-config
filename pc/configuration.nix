@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./cachix.nix
     ];
 
   # Bootloader.
@@ -219,7 +218,6 @@ virtualisation.docker.enableNvidia = true;
     steam
     steam-run
     sysbench
-    cachix
     gnome-keyring
     zig
     telegram-desktop
@@ -286,7 +284,6 @@ services.input-remapper.enable = true;
 programs.dconf.enable = true;
 
 environment.variables.NIXPKGS_ALLOW_UNFREE = "1";
-environment.variables.CACHIX_AUTH_TOKEN="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzYzA2MTFlMC0yMzFhLTQ3Y2UtOTZjZC1mYWU1ODRhZjQ5YmMiLCJzY29wZXMiOiJjYWNoZSJ9.qCw_oYDw7DWDm4Nawz5Go4o9QvzGxjc3CEB9ucXUsw4";
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

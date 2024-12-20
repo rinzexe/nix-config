@@ -8,7 +8,8 @@
   outputs = { self, nixpkgs }: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [
+      modules = 
+      [
         # fixes a weird bug, don't remove
                 ({ ... }: {
           nixpkgs.config.permittedInsecurePackages = [
