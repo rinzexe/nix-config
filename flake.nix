@@ -1,5 +1,5 @@
 {
-  description = "My NixOS configuration";
+  description = "NIXOS Config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -18,7 +18,7 @@
         })
         ./common/aliases.nix
         ./common/config.nix
-        /etc/nixos/configuration.nix
+        ./pc/configuration.nix
       ];
     };
   };
