@@ -10,6 +10,7 @@
       system = "x86_64-linux";
       modules = [
         ./common/aliases.nix
+        ./common/config.nix
         /etc/nixos/configuration.nix
       ];
     };
